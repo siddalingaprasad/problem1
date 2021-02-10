@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsiveui</title>
+    <style>
+        
+        h1{
+            border: solid 2px black;
+            color: blue;
+            background-color: aquamarine;
+            text-align: center;
+            padding: 20px;
+        }
+        .link-container {
+
+            margin: 4vh 0;
+        }
+       .links{
+            background-color:pink;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            
+
+        }
+        th,tr{
+            border: solid 1px black;
+            text-align: center; 
+        }
+        a{
+            text-decoration: none;
+            font-size: 20px;
+            color: black;
+            height: 20vh;
+            
+        }
+
+        
+
+        @media all and (min-width: 1024px) {
+            .page-container{
+            display: grid;
+            grid-template-columns: 15% 60% 25%;
+            grid-gap: space-between;
+            /* grid-column-gap: 3%; */
+        }
+        .details-container {
+            height: 70vh;
+        }
+        .frame-container {
+            width: 50vw;
+            height: 70vh;
+        }
+         }
+ 
+        @media all and (min-width: 480px) and (max-width: 1024px) { 
+            .page-container{
+            display: grid;
+            grid-template-columns: 40% 40%;
+            grid-gap: space-between;
+            grid-column-gap: 3%;
+        }
+        .details-container {
+             width: 100vw;
+         }
+         .frame-container {
+            width: 50vw;
+            height: 50vh;
+        }
+        }
+                
+        @media all and (max-width: 480px) {
+            .page-container{
+            display: grid;
+            grid-template-columns: 99%;
+            grid-gap: space-between;
+            grid-column-gap: 3%;
+        }
+        .details-container {
+             width: 100vw;
+         }
+         .link-container{
+            width: 99vw;
+            text-align: center;
+            margin: 2vh 0; 
+            height:2vh; 
+        }
+        .frame-container {
+            width: 99vw;
+            height:40vh;
+           
+        }
+        .links {
+          
+            padding: 8px 150px;
+        }
+        .contain{
+            height: 40vh;
+        }
+         }
+         
+        
+    </style>
+</head>
+<body>
+    <h1>RESPONSIVE  USER  INTERFACE</h1>
+    <div>
+
+
+    <div class="page-container">
+        <div class="contain">
+            <div class="link-container">
+            <a class="links" href="home.html" target="frame1" onclick="top.frame2.location='hh.html';">Home</a> </div><br/>
+            <div class="link-container"><a class="links" href="apj.jpg" target="frame1" onclick="top.frame2.location='apj.html';">Image</a> </div><br/>
+            <div class="link-container"><a class="links" href="cheak.mp3" target="frame1" onclick="top.frame2.location='mp3.html';">Audio</a> </div> <br/>
+            <div class="link-container"><a class="links" href="wildlife.mp4" target="frame1" onclick="top.frame2.location='Video.html';">Video</a> </div>
+
+        </div>
+        <div>
+            <iframe class="frame-container" src="home.html"  name="frame1" frameborder="1"
+                 ></iframe>
+
+        </div>
+        <div>
+            <div >
+                <iframe class="details-container" src="hh.html" name="frame2" scrolling="no" frameborder="1"></iframe></td>
+            </div>
+        </div>
+    </div>
+    <div style="border: solid 18px blue; background-color: blue;" >
+       
+    </div>
+
+    <script src="respo.js"></script>
+</body>
+</html>
